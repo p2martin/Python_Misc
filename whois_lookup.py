@@ -20,7 +20,7 @@ def whois_lookup():
 	ips = parse_ip_to_list()
 	for current_ip in ips:
 		print ("\t[+]--Current info being saved for \t%s" % current_ip)
-    current_info = whois.whois(current_ip.strip())	
+    		current_info = whois.whois(current_ip.strip())	
 		f.write(str(current_info))
 		time.sleep(1)							                        #allow time for reading next socket obj
 	f.close()
