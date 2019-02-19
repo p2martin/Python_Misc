@@ -3,7 +3,14 @@ import whois,time
 
 """
 Using python 3.7.2 / whois module to perform multiple whois queries on ip / domains from text file and write results out to
-a txt file
+a txt file.
+
+Required: whois module, can be installed with:
+	pip install whois
+
+Usage: 	place script in same location as txt file containing ip addreses, 1 per line. 
+	command:
+	python whois_lookup.py
 """
 
 def parse_ip_to_list():
@@ -13,7 +20,6 @@ def parse_ip_to_list():
 		ips.append(ip_addr)						          
 	f.close() 									              
 	return ips
-
 
 def whois_lookup():
 	f = open("whoisinfo.txt","w")
